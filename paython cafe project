@@ -1,0 +1,116 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "c63b26e0-769e-4236-afe2-10c393d2c7ef",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Welcome to PAYTHON CAFE\n",
+      "pizza: Rs40\n",
+      "pasta: Rs90\n",
+      "filter coffee: Rs40\n",
+      "burger: Rs80\n",
+      "icecream: Rs30\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the name of the item you want to order:  pizza\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Your item 'pizza' has been added to your order.\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Do you want to add another item? (yes/no):  yes\n",
+      "Enter the name of the second item:  pizza\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Item 'pizza' has been added to your order.\n",
+      "The total amount to pay is: Rs80\n"
+     ]
+    }
+   ],
+   "source": [
+    "menu = {\n",
+    "    'pizza': 40,\n",
+    "    'pasta': 90,\n",
+    "    'filter coffee': 40,\n",
+    "    'burger': 80,\n",
+    "    'icecream': 30,\n",
+    "}\n",
+    "\n",
+    "print(\"Welcome to PAYTHON CAFE\")\n",
+    "print(\"pizza: Rs40\\npasta: Rs90\\nfilter coffee: Rs40\\nburger: Rs80\\nicecream: Rs30\\n\")\n",
+    "\n",
+    "order_total = 0\n",
+    "\n",
+    "item_1 = input(\"Enter the name of the item you want to order: \").lower()\n",
+    "if item_1 in menu:\n",
+    "    order_total += menu[item_1]\n",
+    "    print(f\"Your item '{item_1}' has been added to your order.\")\n",
+    "else:\n",
+    "    print(f\"Ordered item '{item_1}' is not available!\")\n",
+    "\n",
+    "another_order = input(\"Do you want to add another item? (yes/no): \").lower()\n",
+    "if another_order == \"yes\":\n",
+    "    item_2 = input(\"Enter the name of the second item: \").lower()\n",
+    "    if item_2 in menu:\n",
+    "        order_total += menu[item_2]\n",
+    "        print(f\"Item '{item_2}' has been added to your order.\")\n",
+    "    else:\n",
+    "        print(f\"Ordered item '{item_2}' is not available!\")\n",
+    "\n",
+    "print(f\"The total amount to pay is: Rs{order_total}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "be78309a-6b0d-48d7-a5d9-414096d11623",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
